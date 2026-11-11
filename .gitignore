@@ -1,5 +1,7 @@
-build
-nbproject
-test
+build/
+nbproject/
 manifest.mf
 build.xml
+target/
+.mvn/
+.vscode/
