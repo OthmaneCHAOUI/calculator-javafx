@@ -19,12 +19,12 @@ public class Main extends Application{
     public void start(Stage myStage){
         display_label = new Label("0");
 
-        // node racine
+        // root node
         GridPane grid = new GridPane(10, 10);
         grid.setAlignment(Pos.CENTER);
         grid.add(display_label, 0, 0, 4, 1);
         
-        // gestion des boutons
+        // button handling
         Button cbtn = new Button("C");
         cbtn.setMinSize(225, 40);
         cbtn.setOnAction(event -> hundlerButtonClick(cbtn.getText()));
@@ -53,15 +53,15 @@ public class Main extends Application{
             }
         }
 
-        // titre fenetre
+        // window title
         myStage.setTitle("Calculatrice");
-        // definition Scene
+        // scene definition
         Scene myScene = new Scene(grid);
-        // css style
+        // CSS styling
         myScene.getStylesheets().add(getClass().getResource("../style/style.css").toExternalForm());
-        // mettre scene dans stage
+        // set scene on stage
         myStage.setScene(myScene);
-        // display_label stage
+        // show display label on stage
         myStage.show();
     }
 
@@ -128,9 +128,9 @@ public class Main extends Application{
     }
 
     public static void main(String[] args) {
-        // message preparation fenetre
+        // window preparation message
         System.out.println("lanching application...");
-        // lancer fenetre
+        // launch window
         launch(args);
     }
 }
